@@ -1,13 +1,42 @@
 .experience-accord {
-  margin: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.accord-panel {
+.accordion-section {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
   font-family: "Google Sans Regular";
+  font-size: 1.2em;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.accordion-content {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
   .experience-accord {
-    margin: 20px;
+    padding: 10px;
   }
 }

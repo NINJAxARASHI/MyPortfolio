@@ -1,88 +1,117 @@
 .experience-main {
   width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
 }
 
 .basic-experience {
-  margin-left: 5%;
-  margin-right: 5%;
+  padding: 2rem 0;
 }
 
 .experience-heading-div {
   display: flex;
-}
-
-.experience-heading-div > * {
-  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .experience-heading-img-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .experience-heading-text-div {
   text-align: center;
 }
 
-.experience-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
 .experience-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 80px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .experience-heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .experience-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1380px) {
-  .experience-heading-text {
-    font-size: 50px;
-    margin-top: 80px;
-  }
-  .experience-heading-sub-text {
-    font-size: 25px;
-  }
+.experience-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.experience-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.experience-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.experience-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.experience-card li {
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
   .experience-heading-text {
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: 2rem;
   }
 
   .experience-heading-sub-text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
-  .experience-heading-div {
-    flex-direction: column;
+  .experience-content {
+    padding: 1rem;
   }
 
-  .experience-header-detail-text {
-    font-size: 16px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
+  .experience-cards-container {
+    grid-template-columns: 1fr;
   }
 }

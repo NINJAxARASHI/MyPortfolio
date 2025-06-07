@@ -60,6 +60,13 @@
   height: auto;
 }
 
+.contact-heading-img-div img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .blog-heading-img-div > * {
   max-width: 100%;
   height: auto;
@@ -71,7 +78,7 @@
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .blog-heading-text {
@@ -97,6 +104,7 @@
   margin-left: 20px;
   margin-right: 20px;
   font-family: "Google Sans Medium";
+  margin-bottom: 10px;
 }
 
 .blog-header-detail-text {
@@ -112,6 +120,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: -10px;
 }
 
 .blogsite-btn-div {
@@ -130,7 +139,7 @@
 @media (max-width: 1380px) {
   .contact-heading-text {
     font-size: 50px;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .blog-heading-text {

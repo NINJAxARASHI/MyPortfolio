@@ -1,4 +1,56 @@
 .raw_logo {
-  height: 305;
-  width: 440;
+  height: 305px;
+  width: 440px;
+  background-color: #1a237e; /* Bleu foncé */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.signature-animated {
+  font-family: "Agustina Regular", cursive;
+  font-size: 40px;
+  fill: #ffffff;
+  position: relative;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(12) forwards 0.5s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.letter {
+  opacity: 0;
+  animation: fadein 2s linear forwards 2.5s;
+}
+
+.myHexagon {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: dash 4s linear forwards 0.5s;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

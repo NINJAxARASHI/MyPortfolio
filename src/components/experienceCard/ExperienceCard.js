@@ -15,11 +15,16 @@ class ExperienceCard extends Component {
       >
         <Fade left duration={2000} distance="40px">
           <div className="experience-card-logo-div">
-            <img
-              className="experience-card-logo"
-              src={require(`../../assets/images/${experience["logo_path"]}`)}
-              alt=""
-            />
+            {experience["logo_path"] && (
+              <img
+                className="experience-card-logo"
+                src={require(`../../assets/images/${experience["logo_path"]}`)}
+                alt=""
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
+              />
+            )}
           </div>
         </Fade>
         <div className="experience-card-stepper">
@@ -101,12 +106,27 @@ class ExperienceCard extends Component {
               <div
                 style={{
                   display: "flex",
+                  flexDirection: "column",
                   justifyContent: "flex-start",
                   marginTop: 20,
                 }}
               >
-                <div className="repo-description" />
-                {experience["description"]}
+                {Array.isArray(experience["description"]) ? (
+                  <ul className="experience-card-description">
+                    {experience["description"].map((item, index) => (
+                      <li key={index} style={{ color: theme.text }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p
+                    className="experience-card-description"
+                    style={{ color: theme.text }}
+                  >
+                    {experience["description"]}
+                  </p>
+                )}
               </div>
             </div>
           </div>

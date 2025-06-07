@@ -1,0 +1,144 @@
+.ninja-logo {
+  height: 305px;
+  width: 440px;
+}
+
+.ninja-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.splash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #2f438d;
+  border-radius: 15px;
+  padding: 50px;
+}
+
+.splash-logo {
+  max-width: 300px;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.splash-text {
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  opacity: 0;
+  background: linear-gradient(45deg, #000000, #333333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.arashi-text {
+  font-size: 48px;
+  animation: signatureFadeIn 1.5s ease-in forwards 1s;
+  transform: rotate(-2deg);
+  letter-spacing: 2px;
+}
+
+.portfolio-text {
+  font-size: 42px;
+  animation: signatureFadeIn 1.5s ease-in forwards 2s;
+  transform: rotate(1deg);
+  letter-spacing: 1px;
+  margin-left: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes signatureFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotate(-2deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(15px) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-2deg);
+  }
+}
+
+/* Animation spécifique pour PORTFOLIO */
+.portfolio-text {
+  animation: portfolioFadeIn 1.5s ease-in forwards 2s;
+}
+
+@keyframes portfolioFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotate(1deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(15px) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(1deg);
+  }
+}
+
+/* Animation pour le logo */
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.splash-logo {
+  animation: logoAppear 1s ease-out forwards;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+  .arashi-text {
+    font-size: 2rem;
+  }
+
+  .portfolio-text {
+    font-size: 1.5rem;
+  }
+}
